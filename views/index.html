@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body ng-controller="pollListController">
-	<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="navbar-header"><a href="#/polls" class="navbar-brand">Polls</a></div></nav>
+	<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="navbar-header"><a href="#/polls" class="navbar-brand">Siaw Young's Polling App!!</a></div></nav>
 	<div class="container">
 		<div>
 			<ng-view>
@@ -19,65 +19,11 @@
 	<script src="/javascripts/angular-resource.min.js"></script>
 	<script src="/javascripts/angular-route.min.js"></script>
 	<script src="/javascripts/app.js"></script>
+	<script src="/javascripts/services.js"></script>
 	<script src="/javascripts/controllers.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	
 
-	<!-- <script>
-	var polls = angular.module('polls', ['ngRoute'])
-
-	.config(['$routeProvider', function($routeProvider) {
-		$routeProvider
-			.when('/polls', 
-			{
-				templateUrl: "partials/list.html",
-				controller: 'pollListController'	
-			})
-			.when('/polls/:pollId',
-			{
-				templateUrl: "partials/item.html",
-				controller: 'pollItemController'
-			})
-			.when('/new',
-			{
-				templateUrl: "partials/new.html",
-				controller: 'pollNewController'
-			})
-			.otherwise(
-			{
-				redirecTo: '/polls'
-			});
-	}
-]);
-
-	var controllers = {};
-
-	controllers.pollListController = function($scope) {
-		$scope.polls = [];
-	};
-
-	controllers.pollItemController = function($scope, $routeParams) {
-		$scope.poll = {};
-		$scope.vote = function() {};
-	};
-
-	controllers.pollNewController = function($scope) {
-		$scope.poll = {
-			question: '',
-			choices: [{text: ''}, {text: ''}, {text: ''}]
-		};
-
-		$scope.addChoice = function() {
-			$scope.poll.choices.push(
-				{text: ''}
-			)
-		};
-
-		$scope.createPoll = function() {};
-
-	};
-
-	polls.controller(controllers);
-
-	</script> -->
 </body>
 </html>
 
