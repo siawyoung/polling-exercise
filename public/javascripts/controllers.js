@@ -1,6 +1,6 @@
-angular.module('poll.controllers', ['poll.services']).
+angular.module('poll.controllers', ['poll.services'])
 
-	controller('pollListController', ['$scope', 'Poll', function($scope, Poll) {
+	.controller('pollListController', ['$scope', 'Poll', function($scope, Poll) {
 		$scope.polls = Poll.query();
 	}])
 
